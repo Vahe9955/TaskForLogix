@@ -1,0 +1,60 @@
+﻿@model List<ApplicationUser>
+@{
+    var numberId = 1;
+}
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+@if (Model != null)
+{
+    <div style="margin-top:30px;">
+        <h2 style="display:inline-block">Users table</h2>
+        <form style="display: inline-block; float: right; padding-top: 10px;" action="/itemDb/ClearItems" method="post">
+            <button type="submit">Clear</button>
+        </form>
+    </div>
+
+    <table style="width:100%">
+        <tr>
+            <th>    FullName    </th>
+            <th>    Address    </th>
+            <th>    PhoneNumber   </th>
+            <th>    DateOfBirth   </th>
+            <th>    Email   </th>
+            <th>    Actions   </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(numberId++)
+                </td>
+                <td>
+                    @item.FullName
+                </td>
+                <td>
+                    @item.Address
+                </td>
+                <td>
+                    @item.DateOfBirth
+                </td>
+                <td>
+                    @item.Email
+                </td>
+                <td>
+                    <form action="/dashboard/remove?id=@item.Id" method="post">
+                        <button type="submit"> 🗑 </button>
+                    </form>
+
+                    <button type="button" class="btn btn-default btn-lg" onclick='SetUserModel(@Json.Serialize(item))'>
+                        ✏️
+                    </button>
+                </td>
+            </tr>
+        }
+    </table>
+}
+
