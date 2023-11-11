@@ -1,0 +1,26 @@
+﻿@model UserRegistrationModel
+
+<div>
+    <form id="account" action="/register/getuser" method="post">
+        <h2>Use a local account to log in.</h2>
+        <hr />
+        <input type="text" id="phoneNumber" name="phoneNumber" class="form-floating mb-3 form-control" maxlength="14" placeholder="(123) 456-7890" pattern="\(\d{3}\) \d{3}-\d{4}" class="form-control" autocomplete="tel" aria-required="true" required minlength="14" maxlength="14" />
+        <input type="password" id="password" name="password" class="form-floating mb-3 form-control" autocomplete="new-password" aria-required="true" placeholder="Password" />
+        <div>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Add JavaScript for formatting the phone number
+        document.getElementById('phoneNumber').addEventListener('input', function (event) {
+            let inputValue = event.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+            if (inputValue.length > 0) {
+                inputValue = '(' + inputValue.substring(0, 3) + ') ' + inputValue.substring(3, 6) + '-' + inputValue.substring(6, 10);
+            }
+            event.target.value = inputValue;
+        });
+    });
+</script>

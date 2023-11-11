@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForLogix", "TaskForLogix.csproj", "{EB8CE2F4-DEB1-43EF-860F-606BE70B29DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB8CE2F4-DEB1-43EF-860F-606BE70B29DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8CE2F4-DEB1-43EF-860F-606BE70B29DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8CE2F4-DEB1-43EF-860F-606BE70B29DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8CE2F4-DEB1-43EF-860F-606BE70B29DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51A3EA86-8BBF-41B1-8387-2A7023FA9BAB}
+	EndGlobalSection
+EndGlobal
